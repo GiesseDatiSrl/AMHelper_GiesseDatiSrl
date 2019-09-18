@@ -24,7 +24,7 @@ In questo breve tutorial vedremo un esempio su come recuperare i dati degli ordi
     using AMHelper.WS;
   ```
 
-4. Imposta i token di autorizzazione per leggere da License Manager e dall'AppManager (contattare Apexnet per le chiavi)
+4. Imposta i token di autorizzazione per leggere da License Manager e dall'AppManager (contattare Giesse Dati Srl per le chiavi)
   ```c#
     // Chiavi
     string AuthKeyLM = "3405D863-C49C-4D4B-B1FF-35D6231C61D9";
@@ -161,8 +161,4 @@ Nella versione compilata per il framework 4.0, viene usata la libreria:
 
 * RestSharp - http://restsharp.org
 
-Segnalazioni
----
-Potete segnalare errori o imprecisioni della documentazione a questo link:
 
-* https://github.com/Apex-net/AMHelper/issues
