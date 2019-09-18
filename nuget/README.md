@@ -21,7 +21,7 @@ Note di rilascio
 ---
 L'elenco completo delle modifiche è disponibile a questo indirizzo:
 
-* https://github.com/Apex-net/AMHelper/releases
+* https://github.com/GiesseDatiSrl/AMHelper_GiesseDatiSrl/releases
 
 Configurare un pacchetto 
 ---
