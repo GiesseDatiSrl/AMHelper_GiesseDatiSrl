@@ -99,57 +99,6 @@ In questo breve tutorial vedremo un esempio su come recuperare i dati degli ordi
   }
   ```
 
-Inviare notifiche push
----
-La libreria contiene anche 2 metodi per inviare le notifiche push agli utenti degli iPad.
-La notifica può essere mandata specificando il codice agente del gestionale o il codice utente configurato nell'appmanager.
-
-Esempio di invio con codice agente:
-
-```c#
-  static void SendNotificationByAgent_Sample()
-    {
-        // notifica_push_send_by_username
-        // Impostare le chiavi di autorizzazione
-        string AuthKeyLM = "41AF11C0-36C9-4C16-8BAF-83B033B959CA";
-        // string AuthKeyAM = "FDFC769C-E950-4067-B4FF-0F3A134FB94B";
-  
-        // Impostare true per l'utilizzo dei server di produzione (default)
-        // false consente l'utilizzo di server di test (solo ad uso interno)
-        bool Produzione =  true;
-  
-        GetDataLM lmdata = new GetDataLM(AuthKeyLM, Produzione);
-  
-        ws_rec_lmparam AMData = null;
-        bool lmRetVal = lmdata.get_am_par(ref AMData);
-  
-        bool retRelease = lmdata.send_push_notification_by_agent("8", "Testo del messaggio per l'agente");
-    }
-```
-Esempio di invio con utente appmanager
-
-```c#
-  static void SendNotificationByUserName_Sample()
-  {
-      // notifica_push_send_by_username
-      // Impostare le chiavi di autorizzazione
-      string AuthKeyLM = "41AF11C0-36C9-4C16-8BAF-83B033B959CA";
-      // string AuthKeyAM = "FDFC769C-E950-4067-B4FF-0F3A134FB94B";
-  
-      // Impostare true per l'utilizzo dei server di produzione (default)
-      // false consente l'utilizzo di server di test (solo ad uso interno)
-      bool Produzione = true;
-  
-      GetDataLM lmdata = new GetDataLM(AuthKeyLM, Produzione);
-  
-      ws_rec_lmparam AMData = null;
-      bool lmRetVal = lmdata.get_am_par(ref AMData);
-  
-      bool retRelease = lmdata.send_push_notification_by_username("admin", "Testo del messaggio per l'utente");
-  }
-```
-
-
 Dipendenze
 ---
 Nella versione compilata per il framework 2.0, vengono utilizzate 2 librerie:
